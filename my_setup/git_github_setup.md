@@ -23,3 +23,18 @@ sudo apt install -y ./gh*
 2. Download `gh_x.xx.x_linux_amd64.deb`
 3. Install using `sudo apt install -y ~/Downloads/gh*`
 
+## Renaming the master Branch to main
+
+### Local
+```
+git branch -m master main
+git status
+```
+
+## Remote
+
+Note: Make sure your default branch is set as main in GitHub. (Setting > Branches > Default Branch)
+```
+git push -u origin main
+git push origin --delete master 
+```
